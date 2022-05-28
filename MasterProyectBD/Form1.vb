@@ -23,6 +23,8 @@
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Dim a As New controlAsis()
+        Me.Hide()
         a.Show()
+
     End Sub
 End Class
