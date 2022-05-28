@@ -16,7 +16,7 @@
 
             Else
                 Dim datasetS As New MasterBDDataSetTableAdapters.EmpleadoTableAdapter
-                Dim b As String = DateTime.Now.ToString("hh: mm : ss")
+                Dim b As String = DateTime.Now.ToString("hh:mm:s")
                 Dim a As String = DateTime.Now.ToString("MM/dd/yy")
                 dataset.InsertQuery(1, a, b, 0, txbID.Text)
                 MsgBox("Bienvenido" + datasetS.SaludoQuery(txbID.Text))
@@ -46,7 +46,7 @@
                 Dim dataset As New MasterBDDataSetTableAdapters.JornadaTableAdapter
 
 
-                Dim b As String = DateTime.Now.ToString("hh: mm : ss")
+                Dim b As String = DateTime.Now.ToString("hh:mm:s")
                 Dim datasetS As New MasterBDDataSetTableAdapters.EmpleadoTableAdapter
                 dataset.SalidaQuery(b, txbID.Text)
 
@@ -73,5 +73,11 @@
     Private Sub Timer1_Tick_1(sender As Object, e As EventArgs) Handles Timer1.Tick
 
         Me.Label2.Text = DateTime.Now
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim a As New Form1
+        a.Show()
+        Me.Hide()
     End Sub
 End Class
